@@ -47,7 +47,22 @@ async def doatrick(ctx):
         await ctx.channel.send("*huh?*")
         await ctx.channel.send("https://tenor.com/view/happymonday-cute-puppy-dog-cute-dog-gif-14228361")
 
-
+@bot.command()
+async def rolldice(ctx):
+    randomTrick = random.randint(1, 6)
+    if randomTrick == 1:
+        await ctx.channel.send("**You rolled 1!**")
+    elif randomTrick == 2:
+        await ctx.channel.send("**You rolled 2!**")
+    elif randomTrick == 3:
+        await ctx.channel.send("**You rolled 3!**")
+    elif randomTrick == 4:
+        await ctx.channel.send("**You rolled 4!**")
+    elif randomTrick == 5:
+        await ctx.channel.send("**You rolled 5!**")
+    else:
+        await ctx.channel.send("**You rolled 6! This is your lucky day!**")
+        
 @bot.command()
 async def treat(ctx):
     await ctx.channel.send("https://tenor.com/view/dog-treat-snack-scooby-gif-12847347")
